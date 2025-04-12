@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Tebak Umur  </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        input, button {
+            padding: 10px;
+            margin: 5px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input:focus {
+            outline: none;
+            border-color: #4CAF50;
+            box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        </style>
+        <style>
+            .tab-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            }
+            .tab {
+            padding: 10px 20px;
+            margin: 0 5px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background-color: #4CAF50;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            }
+            .tab:hover {
+            background-color: #45a049;
+            }
+            .tab.active {
+            background-color: #2e7d32;
+            }
+        </style>
+        <script>
+            function showAffectionLevel() {
+            const affectionPercentage = Math.floor(Math.random() * 101);
+            document.getElementById('result').innerText = `Seberapa sayang sih? Aku sayang kamu ${affectionPercentage}%!`;
+            }
+        </script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Tebak Umur</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        input, button {
+            padding: 10px;
+            margin: 5px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input:focus {
+            outline: none;
+            border-color: #4CAF50;
+            box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Program Tebak Umur</h1>
+    <p>by Alfat</p>
+    <p1>Masukan Nama Anda:</p1>
+    <input type="text" id="nameInput" placeholder="Contoh: Budi">
+    <button onclick="predictSoulmate()">Tebak Umur</button>
+    <p id="result"></p>
+
+    <script>
+        function predictSoulmate() {
+            const name = document.getElementById('nameInput').value;
+            if (name) {
+                const soulmates = ['30', '21', '2 bulan', '40', '27','51', '34','17','71', '19','23','25','29','31','33','35','37','39','41','43','45','47','49']; 
+                const randomIndex = Math.floor(Math.random() * soulmates.length);
+                const soulmate = soulmates[randomIndex];
+                document.getElementById('result').innerText = `Halo, ${name}! Umur Anda adalah adalah ${soulmate}.`;
+            } else {
+                document.getElementById('result').innerText = 'Mohon masukkan nama yang valid.';
+            }
+        }
+    </script>
+</body>
+</html>
